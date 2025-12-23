@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishant Webworks | Digital Artisans of India</title>
+    <meta name="description" content="Ishant Webworks: Where Indian heritage meets modern tech. High-performance web development starting at ₹2,499.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Plus+Jakarta+Sans:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        saffron: '#FF9933',
+                        rani: '#D81B60', // Rani Pink
+                        brass: '#B8860B', // Gold/Brass
+                        sandstone: '#FFF9F2',
+                        emerald: '#138808',
+                        dark: '#2D1B0D',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --sandstone: #FFF9F2;
+        }
+        
+        body {
+            background-color: var(--sandstone);
+            color: #2D1B0D;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Indian Architectural Arches */
+        .mughal-arch {
+            clip-path: polygon(0% 100%, 0% 30%, 20% 15%, 50% 0%, 80% 15%, 100% 30%, 100% 100%);
+        }
+        
+        .mughal-dome {
+            clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+        }
+
+        /* Jali Background Pattern */
+        .jali-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='%23B8860B' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(184, 134, 11, 0.15);
+            box-shadow: 0 10px 40px -10px rgba(45, 27, 13, 0.1);
+        }
+
+        .vibrant-text-gradient {
+            background: linear-gradient(135deg, #FF9933, #D81B60, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .mandala-rotate {
+            animation: rotate-slow 120s linear infinite;
+        }
+
+        @keyframes diya-glow {
+            0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 153, 51, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(255, 153, 51, 0.9)); }
+        }
+
+        @keyframes flame-flicker {
+            0%, 100% { transform: scaleY(1) skewX(0deg); opacity: 0.9; }
+            20% { transform: scaleY(1.1) skewX(1deg); opacity: 1; }
+            40% { transform: scaleY(0.9) skewX(-1deg); opacity: 0.8; }
+            60% { transform: scaleY(1.2) skewX(0.5deg); opacity: 1; }
+            80% { transform: scaleY(1) skewX(-0.5deg); opacity: 0.9; }
+        }
+
+        @keyframes light-swing {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .diya-animation {
+            animation: diya-glow 3s ease-in-out infinite;
+        }
+
+        .flame {
+            animation: flame-flicker 0.15s infinite alternate;
+            transform-origin: bottom center;
+        }
+
+        .light-string {
+            animation: light-swing 5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        .watermark-text {
+            font-size: 20vw;
+            line-height: 1;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: rgba(184, 134, 11, 0.035);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .rangoli-overlay {
+            background-image: radial-gradient(circle at center, transparent 30%, rgba(216, 27, 96, 0.03) 70%);
+            mask-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='black'/%3E%3C/svg%3E");
+        }
+
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--sandstone); }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(#FF9933, #D81B60); 
+            border-radius: 10px;
+            border: 2px solid var(--sandstone);
+        }
+
+        /* Form styling fixes */
+        input::placeholder, textarea::placeholder {
+            color: rgba(45, 27, 13, 0.4);
+        }
+        
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23B8860B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 1.25rem;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="jali-bg selection:bg-saffron selection:text-white">
+    <div id="root"></div>
+</body>
+</html>
